@@ -13,15 +13,72 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="scene" aria-hidden="true">
+      <div class="wash wash-tr"></div>
+      <div class="wash wash-bl"></div>
+      <div class="wash wash-tr-soft"></div>
+      <div class="wash wash-bl-soft"></div>
+
+      <svg class="geo geo-tr" viewBox="0 0 160 160">
+        <defs>
+          <clipPath id="hatch-tr"><circle cx="86" cy="78" r="36"/></clipPath>
+        </defs>
+        <circle cx="118" cy="42" r="28" fill="#4d5c3a" opacity="0.88"/>
+        <circle cx="86" cy="78" r="36" fill="rgb(184 201 160 / 0.22)"/>
+        <g clip-path="url(#hatch-tr)" stroke="#2b2b2b" stroke-width="0.55" opacity="0.38">
+          <line x1="48" y1="50" x2="124" y2="50"/>
+          <line x1="48" y1="56" x2="124" y2="56"/>
+          <line x1="48" y1="62" x2="124" y2="62"/>
+          <line x1="48" y1="68" x2="124" y2="68"/>
+          <line x1="48" y1="74" x2="124" y2="74"/>
+          <line x1="48" y1="80" x2="124" y2="80"/>
+          <line x1="48" y1="86" x2="124" y2="86"/>
+          <line x1="48" y1="92" x2="124" y2="92"/>
+          <line x1="48" y1="98" x2="124" y2="98"/>
+          <line x1="48" y1="104" x2="124" y2="104"/>
+        </g>
+      </svg>
+
+      <svg class="geo geo-bl" viewBox="0 0 180 160">
+        <defs>
+          <clipPath id="hatch-bl"><circle cx="54" cy="86" r="32"/></clipPath>
+        </defs>
+        <circle cx="38" cy="118" r="26" fill="#2a2a2a" opacity="0.82"/>
+        <circle cx="68" cy="108" r="24" fill="#5b6b45" opacity="0.86"/>
+        <circle cx="54" cy="86" r="32" fill="rgb(184 201 160 / 0.2)"/>
+        <g clip-path="url(#hatch-bl)" stroke="#2b2b2b" stroke-width="0.55" opacity="0.38">
+          <line x1="20" y1="62" x2="88" y2="62"/>
+          <line x1="20" y1="68" x2="88" y2="68"/>
+          <line x1="20" y1="74" x2="88" y2="74"/>
+          <line x1="20" y1="80" x2="88" y2="80"/>
+          <line x1="20" y1="86" x2="88" y2="86"/>
+          <line x1="20" y1="92" x2="88" y2="92"/>
+          <line x1="20" y1="98" x2="88" y2="98"/>
+          <line x1="20" y1="104" x2="88" y2="104"/>
+        </g>
+      </svg>
+
+      <div class="foliage foliage-tl">
+        <img class="lf lf-palm" src="./assets/ornaments/trop-palm.svg" alt="" />
+        <img class="lf lf-curve" src="./assets/ornaments/trop-curve.svg" alt="" />
+        <img class="lf lf-monstera" src="./assets/ornaments/trop-monstera.svg" alt="" />
+      </div>
+      <div class="foliage foliage-br">
+        <img class="lf lf-palm-arch" src="./assets/ornaments/trop-palm-arch.svg" alt="" />
+        <img class="lf lf-banana" src="./assets/ornaments/trop-banana.svg" alt="" />
+        <img class="lf lf-monstera-br" src="./assets/ornaments/trop-monstera.svg" alt="" />
+        <img class="lf lf-curve-br" src="./assets/ornaments/trop-curve.svg" alt="" />
+      </div>
+      <div class="lf-tl-anchor">
+        <img class="lf lf-heart lf-sway" src="./assets/ornaments/trop-ovate.svg" alt="" />
+      </div>
+      <div class="lf-br-anchor">
+        <img class="lf lf-heart-br lf-sway" src="./assets/ornaments/trop-ovate.svg" alt="" />
+      </div>
+    </div>
+
     <main class="page">
       <section class="panel greeting-page is-current" aria-label="Greeting">
-        <img class="foliage foliage-side" src="./assets/ornaments/foliage-side.png" alt="" />
-        <img class="foliage foliage-base" src="./assets/ornaments/foliage-base.png" alt="" />
-        <img class="ornament ornament-tl" src="./assets/ornaments/monstera.svg" alt="" />
-        <img class="ornament ornament-tr-palm" src="./assets/ornaments/palm.svg" alt="" />
-        <img class="ornament ornament-br banana" src="./assets/ornaments/banana.svg" alt="" />
-        <img class="ornament ornament-br-front" src="./assets/ornaments/monstera.svg" alt="" />
-
         <div class="panel-inner">
           <p class="kicker">Dear</p>
           <p id="invitee-name" class="script guest-name"></p>
@@ -32,20 +89,8 @@
         </div>
       </section>
 
-      <section class="panel hero" aria-label="Invitation" aria-hidden="true">
-        <img class="foliage foliage-side" src="./assets/ornaments/foliage-side.png" alt="" />
-        <img class="foliage foliage-base" src="./assets/ornaments/foliage-base.png" alt="" />
-        <img class="ornament ornament-tl" src="./assets/ornaments/monstera.svg" alt="" />
-        <img class="ornament ornament-tl-palm" src="./assets/ornaments/palm.svg" alt="" />
-        <img class="ornament ornament-tr-palm" src="./assets/ornaments/palm.svg" alt="" />
-        <img class="ornament ornament-tr-colo" src="./assets/ornaments/colocasia.svg" alt="" />
-        <img class="ornament ornament-ml" src="./assets/ornaments/colocasia.svg" alt="" />
-        <img class="ornament ornament-br banana" src="./assets/ornaments/banana.svg" alt="" />
-        <img class="ornament ornament-br-front" src="./assets/ornaments/monstera.svg" alt="" />
-        <img class="ornament ornament-br-colo" src="./assets/ornaments/colocasia.svg" alt="" />
-        <img class="ornament ornament-br-palm" src="./assets/ornaments/palm.svg" alt="" />
-
-        <div class="panel-inner">
+      <section class="panel invite-page" aria-label="Invitation" aria-hidden="true">
+        <div class="panel-inner compact">
           <p id="invite-line" class="kicker"></p>
           <h1 class="names">
             <span id="person-a" class="script name"></span>
@@ -53,45 +98,13 @@
             <span id="person-b" class="script name"></span>
           </h1>
           <p id="date-line" class="date"></p>
-        </div>
-      </section>
-
-      <section class="panel schedule" aria-label="Schedule" aria-hidden="true">
-        <img class="foliage foliage-side flip" src="./assets/ornaments/foliage-side.png" alt="" />
-        <img class="ornament ornament-tl small" src="./assets/ornaments/monstera.svg" alt="" />
-        <img class="ornament ornament-tr" src="./assets/ornaments/palm.svg" alt="" />
-        <img class="ornament ornament-tr-colo mid" src="./assets/ornaments/colocasia.svg" alt="" />
-        <img class="ornament ornament-bl" src="./assets/ornaments/banana.svg" alt="" />
-        <img class="ornament ornament-bl-front" src="./assets/ornaments/monstera.svg" alt="" />
-        <img class="ornament ornament-br-palm low" src="./assets/ornaments/palm.svg" alt="" />
-
-        <div class="panel-inner">
-          <h2 class="script section-title">The Day</h2>
-          <ul id="schedule-list" class="schedule-list"></ul>
-        </div>
-      </section>
-
-      <section class="panel venue" aria-label="Venue" aria-hidden="true">
-        <img class="foliage foliage-base" src="./assets/ornaments/foliage-base.png" alt="" />
-        <img class="ornament ornament-tl-palm faint" src="./assets/ornaments/palm.svg" alt="" />
-        <img class="ornament ornament-tr-colo" src="./assets/ornaments/colocasia.svg" alt="" />
-        <img class="ornament ornament-br modest banana" src="./assets/ornaments/banana.svg" alt="" />
-        <img class="ornament ornament-br-front modest" src="./assets/ornaments/monstera.svg" alt="" />
-        <img class="ornament ornament-br-colo" src="./assets/ornaments/colocasia.svg" alt="" />
-        <img class="ornament ornament-br-palm" src="./assets/ornaments/palm.svg" alt="" />
-        <img class="ornament ornament-bl small-leaf" src="./assets/ornaments/banana.svg" alt="" />
-
-        <div class="panel-inner">
-          <h2 class="script section-title">Where</h2>
+          <p id="time-line" class="date time-line"></p>
+          <p class="at">at</p>
           <p id="venue-name" class="venue-name"></p>
           <p id="venue-address" class="venue-address"></p>
           <a id="maps-link" class="maps-link" href="#" target="_blank" rel="noopener noreferrer"
             >Open in Google Maps</a
           >
-          <footer class="closing">
-            <p id="footer-names" class="script footer-names"></p>
-            <p id="footer-date" class="date"></p>
-          </footer>
         </div>
       </section>
     </main>

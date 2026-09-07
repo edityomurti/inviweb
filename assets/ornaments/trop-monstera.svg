@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 340" aria-hidden="true">
+  <defs>
+    <linearGradient id="mBody" x1="30" y1="8" x2="250" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6fa84a"/>
+      <stop offset="0.22" stop-color="#3d7a36"/>
+      <stop offset="0.55" stop-color="#1f4d28"/>
+      <stop offset="1" stop-color="#102418"/>
+    </linearGradient>
+    <linearGradient id="mMid" x1="80" y1="40" x2="200" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8fbf58"/>
+      <stop offset="1" stop-color="#2a5c32"/>
+    </linearGradient>
+    <radialGradient id="mShine" cx="36%" cy="24%" r="52%">
+      <stop offset="0" stop-color="#c6e48a" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#c6e48a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="mSoft" x="-18%" y="-18%" width="136%" height="136%">
+      <feDropShadow dx="5" dy="8" stdDeviation="6" flood-color="#122016" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <g filter="url(#mSoft)">
+    <path fill="url(#mBody)" fill-rule="evenodd" d="
+      M148 10
+      C 118 14, 78 40, 54 86
+      C 34 126, 24 168, 32 204
+      C 16 228, 18 262, 48 280
+      C 68 294, 96 298, 118 286
+      C 128 314, 164 332, 200 312
+      C 232 292, 254 250, 256 208
+      C 260 164, 250 118, 226 80
+      C 204 44, 176 16, 148 10 Z
+      M 88 82 C 74 90, 78 118, 98 126 C 116 132, 130 108, 116 90 C 108 82, 96 76, 88 82 Z
+      M 172 84 C 156 90, 158 122, 180 130 C 202 136, 210 104, 192 88 C 184 80, 176 78, 172 84 Z
+      M 66 146 C 50 156, 52 186, 76 194 C 98 200, 110 168, 90 150 C 80 142, 74 140, 66 146 Z
+      M 198 148 C 178 156, 182 192, 208 198 C 234 202, 242 164, 218 150 C 208 144, 204 142, 198 148 Z
+      M 104 208 C 88 216, 92 248, 118 254 C 142 258, 152 226, 130 210 C 120 204, 112 202, 104 208 Z
+      M 48 112 C 22 126, 12 144, 20 162 C 36 150, 56 136, 72 126 Z
+      M 220 108 C 250 118, 268 138, 262 160 C 242 146, 222 132, 206 122 Z
+      M 42 228 C 18 246, 16 268, 34 282 C 50 266, 68 248, 80 236 Z
+      M 222 224 C 246 240, 264 258, 254 278 C 232 262, 214 246, 202 234 Z
+    "/>
+    <path fill="url(#mShine)" d="M148 10 C 120 16, 86 42, 64 82 C 92 60, 132 32, 176 28 C 168 16, 158 10, 148 10 Z"/>
+  </g>
+  <path d="M148 16 C 156 92, 164 188, 176 318" fill="none" stroke="#0c1c12" stroke-width="5" stroke-linecap="round" opacity="0.34"/>
+  <path d="M152 20 C 158 94, 166 186, 176 304" fill="none" stroke="#d8ee9a" stroke-width="1.5" opacity="0.38"/>
+  <path d="M146 78 C 112 104, 84 138, 66 176" fill="none" stroke="#14301a" stroke-width="1.7" opacity="0.26"/>
+  <path d="M156 74 C 190 102, 218 140, 234 178" fill="none" stroke="#14301a" stroke-width="1.7" opacity="0.24"/>
+  <path d="M152 148 C 120 178, 96 214, 86 248" fill="none" stroke="#14301a" stroke-width="1.5" opacity="0.22"/>
+  <path d="M164 144 C 196 176, 218 214, 228 250" fill="none" stroke="#14301a" stroke-width="1.5" opacity="0.2"/>
+  <path d="M158 208 C 136 236, 126 264, 128 288" fill="none" stroke="#14301a" stroke-width="1.3" opacity="0.18"/>
+</svg>

@@ -2,14 +2,9 @@ window.INVITATION = {
   personA: "Vera",
   personB: "Edityo",
   dateLine: "Saturday, 31 October 2026",
+  timeLine: "14:00 WIB - 16:00 WIB",
   inviteLine: "We invite you to celebrate our wedding",
-  venueName: "The Garden House",
-  venueAddress: "14 Willow Lane, Meadow Hill",
-  mapsUrl: "https://maps.google.com/?q=The+Garden+House",
-  schedule: [
-    { time: "3:00 PM", title: "Ceremony" },
-    { time: "4:00 PM", title: "Cocktails" },
-    { time: "6:00 PM", title: "Dinner" },
-    { time: "8:00 PM", title: "Dancing" },
-  ],
+  venueName: "Sugeban Resto",
+  venueAddress: "Jl. Alianyang No.36, Sungai Bangkong, Kec. Pontianak Kota, Kota Pontianak, Kalimantan Barat",
+  mapsUrl: "https://maps.app.goo.gl/3YQq6muCWb1nd9uG6",
 };

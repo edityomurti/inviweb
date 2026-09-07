@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 280" aria-hidden="true">
+  <defs>
+    <linearGradient id="cBody" x1="20" y1="10" x2="240" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7eb24c"/>
+      <stop offset="0.3" stop-color="#3f7a36"/>
+      <stop offset="0.68" stop-color="#1e4a28"/>
+      <stop offset="1" stop-color="#102016"/>
+    </linearGradient>
+    <linearGradient id="cFold" x1="40" y1="20" x2="180" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c6e48a" stop-opacity="0.55"/>
+      <stop offset="0.4" stop-color="#c6e48a" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#c6e48a" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="cSoft" x="-16%" y="-16%" width="132%" height="132%">
+      <feDropShadow dx="6" dy="10" stdDeviation="7" flood-color="#122016" flood-opacity="0.26"/>
+    </filter>
+  </defs>
+  <g filter="url(#cSoft)">
+    <path fill="url(#cBody)" d="
+      M48 18
+      C 92 6, 150 18, 196 54
+      C 236 86, 258 132, 248 176
+      C 238 220, 200 248, 156 258
+      C 118 266, 86 250, 70 216
+      C 56 186, 62 148, 54 110
+      C 46 72, 36 40, 48 18 Z"/>
+    <path fill="url(#cFold)" d="
+      M56 28
+      C 96 18, 148 32, 186 64
+      C 168 72, 132 62, 98 70
+      C 78 76, 62 54, 56 28 Z"/>
+  </g>
+  <path d="M52 22 C 96 48, 138 110, 168 250" fill="none" stroke="#0c1c12" stroke-width="5.5" stroke-linecap="round" opacity="0.32"/>
+  <path d="M56 26 C 98 50, 138 110, 166 238" fill="none" stroke="#e4f2b0" stroke-width="1.6" opacity="0.32"/>
+  <path d="M78 48 C 108 62, 132 88, 148 118" fill="none" stroke="#14301a" stroke-width="1.4" opacity="0.2"/>
+  <path d="M92 78 C 122 96, 146 128, 160 164" fill="none" stroke="#14301a" stroke-width="1.3" opacity="0.18"/>
+  <path d="M108 118 C 132 140, 150 176, 158 210" fill="none" stroke="#14301a" stroke-width="1.2" opacity="0.16"/>
+</svg>

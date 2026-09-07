@@ -36,49 +36,32 @@
     if (/^(to|name)=/i.test(hash)) hash = hash.split("=").slice(1).join("=");
     var parts = window.location.pathname.split("/").filter(Boolean);
     var last = parts[parts.length - 1] || "";
-    if (/\./.test(last) || /^(assets|invitation)$/i.test(last)) last = "";
+    if (/\./.test(last) || /^(assets|invitation|inviweb)$/i.test(last)) last = "";
     return cleanName(fromQuery || hash || last);
   }
 
-  function fillHero() {
+  function fillInvite() {
     setText("invitee-name", inviteeName() || "Friend");
-
     setText("invite-line", config.inviteLine);
     setText("person-a", config.personA);
     setText("person-b", config.personB);
     setText("date-line", config.dateLine);
+    setText("time-line", config.timeLine);
     setText("venue-name", config.venueName);
     setText("venue-address", config.venueAddress);
-    setText("footer-names", [config.personA, config.personB].filter(Boolean).join(" and "));
-    setText("footer-date", config.dateLine);
 
     var maps = document.getElementById("maps-link");
-    if (maps && config.mapsUrl) {
-      maps.href = config.mapsUrl;
-    }
-  }
-
-  function fillSchedule() {
-    var list = document.getElementById("schedule-list");
-    if (!list) return;
-    list.textContent = "";
-    (config.schedule || []).forEach(function (item) {
-      var li = document.createElement("li");
-      var time = document.createElement("span");
-      time.className = "schedule-time";
-      time.textContent = item.time || "";
-      var title = document.createElement("span");
-      title.className = "schedule-title";
-      title.textContent = item.title || "";
-      li.appendChild(time);
-      li.appendChild(title);
-      list.appendChild(li);
-    });
+    if (maps && config.mapsUrl) maps.href = config.mapsUrl;
   }
 
   function setupPager() {
     var panels = Array.prototype.slice.call(document.querySelectorAll(".panel"));
-    var index = 0;
+    var OPENED_KEY = "invite-opened";
+    var opened = false;
+    try {
+      opened = window.sessionStorage.getItem(OPENED_KEY) === "1";
+    } catch (err) {}
+    var index = opened ? 1 : 0;
     var busy = false;
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var duration = reduce ? 180 : 700;
@@ -93,7 +76,22 @@
       panel.setAttribute("aria-hidden", state === "is-current" ? "false" : "true");
     }
 
+    function markOpened() {
+      opened = true;
+      try {
+        window.sessionStorage.setItem(OPENED_KEY, "1");
+      } catch (err) {}
+    }
+
+    function sync() {
+      panels.forEach(function (panel, n) {
+        place(panel, n === index ? "is-current" : n < index ? "is-left" : "is-right");
+      });
+    }
+
     function go(next) {
+      if (!opened) return;
+      if (next < 1) next = 1;
       if (busy || next === index || next < 0 || next >= panels.length) return;
       busy = true;
       var dir = next > index ? 1 : -1;
@@ -104,18 +102,13 @@
       incoming.classList.add("is-prep");
       incoming.offsetWidth;
       incoming.classList.remove("is-prep");
-
       place(current, dir > 0 ? "is-left" : "is-right");
       place(incoming, "is-current");
       index = next;
 
       window.setTimeout(function () {
         panels.forEach(function (panel, n) {
-          if (n === index) {
-            place(panel, "is-current");
-            return;
-          }
-          place(panel, n < index ? "is-left" : "is-right");
+          place(panel, n === index ? "is-current" : n < index ? "is-left" : "is-right");
         });
         window.setTimeout(function () {
           busy = false;
@@ -153,11 +146,8 @@
         var dx = event.changedTouches[0].clientX - touchX;
         var dy = event.changedTouches[0].clientY - touchY;
         if (Math.abs(dx) < 48 && Math.abs(dy) < 48) return;
-        if (Math.abs(dx) > Math.abs(dy)) {
-          go(dx < 0 ? index + 1 : index - 1);
-        } else {
-          go(dy < 0 ? index + 1 : index - 1);
-        }
+        if (Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? index + 1 : index - 1);
+        else go(dy < 0 ? index + 1 : index - 1);
       },
       { passive: true }
     );
@@ -165,9 +155,12 @@
     var openBtn = document.getElementById("open-invite");
     if (openBtn) {
       openBtn.addEventListener("click", function () {
+        markOpened();
         go(1);
       });
     }
+
+    if (opened) sync();
 
     window.addEventListener("keydown", function (event) {
       if (event.target.closest("a, button, input, textarea") && event.key === " ") return;
@@ -181,7 +174,6 @@
     });
   }
 
-  fillHero();
-  fillSchedule();
+  fillInvite();
   setupPager();
 })();
