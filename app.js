@@ -152,10 +152,13 @@
       { passive: true }
     );
 
+    var music = setupMusic();
+
     var openBtn = document.getElementById("open-invite");
     if (openBtn) {
       openBtn.addEventListener("click", function () {
         markOpened();
+        music.play();
         go(1);
       });
     }
@@ -172,6 +175,50 @@
         go(index - 1);
       }
     });
+  }
+
+  function setupMusic() {
+    var audio = document.getElementById("bg-music");
+    var btn = document.getElementById("sound-toggle");
+    var muted = false;
+
+    if (!audio || !btn) {
+      return { play: function () {} };
+    }
+
+    if (config.musicUrl) audio.src = config.musicUrl;
+    audio.muted = false;
+
+    function syncBtn() {
+      var silent = muted || audio.paused;
+      btn.classList.toggle("is-muted", silent);
+      btn.setAttribute("aria-pressed", silent ? "true" : "false");
+      btn.setAttribute("aria-label", silent ? "Unmute music" : "Mute music");
+    }
+
+    function play() {
+      muted = false;
+      audio.muted = false;
+      var start = audio.play();
+      if (start && start.then) start.then(syncBtn).catch(syncBtn);
+      else syncBtn();
+    }
+
+    btn.addEventListener("click", function () {
+      if (audio.paused) {
+        play();
+        return;
+      }
+      muted = !muted;
+      audio.muted = muted;
+      syncBtn();
+    });
+
+    audio.addEventListener("play", syncBtn);
+    audio.addEventListener("pause", syncBtn);
+    syncBtn();
+
+    return { play: play };
   }
 
   fillInvite();

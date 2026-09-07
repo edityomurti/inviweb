@@ -7,4 +7,5 @@ window.INVITATION = {
   venueName: "Sugeban Resto",
   venueAddress: "Jl. Alianyang No.36, Sungai Bangkong, Kec. Pontianak Kota, Kota Pontianak, Kalimantan Barat",
   mapsUrl: "https://maps.app.goo.gl/3YQq6muCWb1nd9uG6",
+  musicUrl: "./assets/sounds/madeline.mp3",
 };

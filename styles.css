@@ -530,3 +530,49 @@ body::before {
 .maps-link:focus-visible {
   opacity: 0.75;
 }
+
+.sound-btn {
+  position: fixed;
+  right: max(0.85rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 8;
+  width: 2.7rem;
+  height: 2.7rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(246 243 234 / 0.86);
+  color: var(--ink);
+  box-shadow: 0 6px 16px rgb(40 48 32 / 0.12);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.sound-btn svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sound-btn .icon-off {
+  display: none;
+}
+
+.sound-btn.is-muted .icon-on {
+  display: none;
+}
+
+.sound-btn.is-muted .icon-off {
+  display: block;
+}
+
+.sound-btn:hover,
+.sound-btn:focus-visible {
+  background: #fffdf7;
+}

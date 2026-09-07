@@ -94,7 +94,7 @@
           <p id="invite-line" class="kicker"></p>
           <h1 class="names">
             <span id="person-a" class="script name"></span>
-            <span class="and">and</span>
+            <span class="and">&amp;</span>
             <span id="person-b" class="script name"></span>
           </h1>
           <p id="date-line" class="date"></p>
@@ -108,6 +108,19 @@
         </div>
       </section>
     </main>
+    <audio id="bg-music" loop preload="auto" playsinline></audio>
+    <button type="button" class="sound-btn is-muted" id="sound-toggle" aria-label="Unmute music" aria-pressed="true">
+      <svg class="icon-on" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4.4 9.2v5.6h3.1L12 19.2V4.8L7.5 9.2H4.4z" />
+        <path d="M15.1 8.6c1.5 1.4 1.5 5.4 0 6.8" fill="none" />
+        <path d="M17.6 6.2c2.6 2.4 2.6 9.2 0 11.6" fill="none" />
+      </svg>
+      <svg class="icon-off" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4.4 9.2v5.6h3.1L12 19.2V4.8L7.5 9.2H4.4z" />
+        <path d="M15.2 9.2 20 14.8" fill="none" />
+        <path d="M20 9.2 15.2 14.8" fill="none" />
+      </svg>
+    </button>
     <script src="./config.js"></script>
     <script src="./app.js"></script>
   </body>
