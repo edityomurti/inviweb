@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 300" aria-hidden="true">
+  <defs>
+    <linearGradient id="cBody" x1="30" y1="10" x2="230" y2="290" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8fbf58"/>
+      <stop offset="0.35" stop-color="#4a8a3c"/>
+      <stop offset="0.7" stop-color="#2a5c32"/>
+      <stop offset="1" stop-color="#163022"/>
+    </linearGradient>
+    <radialGradient id="cShine" cx="40%" cy="30%" r="48%">
+      <stop offset="0" stop-color="#d8eea4" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#d8eea4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cSoft" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="5" dy="9" stdDeviation="7" flood-color="#142016" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <g filter="url(#cSoft)">
+    <path fill="url(#cBody)" d="M128 16 C 86 28, 40 72, 32 128 C 24 184, 48 236, 96 264 C 128 282, 168 276, 198 246 C 232 212, 246 160, 232 110 C 220 66, 180 22, 128 16 Z"/>
+    <path fill="url(#cShine)" d="M128 16 C 96 26, 62 54, 46 90 C 80 64, 122 36, 164 32 C 154 22, 140 16, 128 16 Z"/>
+  </g>
+  <path d="M128 22 C 132 90, 136 168, 140 268" fill="none" stroke="#102418" stroke-width="4" stroke-linecap="round" opacity="0.28"/>
+  <path d="M130 26 C 134 92, 138 168, 140 256" fill="none" stroke="#e6f4b8" stroke-width="1.4" opacity="0.3"/>
+  <path d="M128 70 C 96 96, 72 130, 58 168" fill="none" stroke="#102418" stroke-width="1.6" opacity="0.22"/>
+  <path d="M130 68 C 164 96, 190 132, 204 170" fill="none" stroke="#102418" stroke-width="1.6" opacity="0.22"/>
+  <path d="M130 120 C 104 148, 86 184, 80 218" fill="none" stroke="#102418" stroke-width="1.4" opacity="0.18"/>
+  <path d="M134 118 C 160 146, 178 182, 186 216" fill="none" stroke="#102418" stroke-width="1.4" opacity="0.18"/>
+  <path d="M128 16 C 118 40, 114 58, 118 78" fill="none" stroke="#102418" stroke-width="2" opacity="0.2"/>
+</svg>

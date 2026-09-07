@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 320" aria-hidden="true">
+  <defs>
+    <linearGradient id="pStem" x1="90" y1="8" x2="110" y2="310" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6d9a40"/>
+      <stop offset="1" stop-color="#2a4f24"/>
+    </linearGradient>
+    <linearGradient id="pLite" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b6d66a"/>
+      <stop offset="0.45" stop-color="#6da046"/>
+      <stop offset="1" stop-color="#2f5c2e"/>
+    </linearGradient>
+    <linearGradient id="pDark" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fbf55"/>
+      <stop offset="0.5" stop-color="#3f7536"/>
+      <stop offset="1" stop-color="#1c3d22"/>
+    </linearGradient>
+    <filter id="pSoft" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#1a2e18" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#pSoft)">
+    <path d="M104 10 C 108 70, 106 160, 98 312" fill="none" stroke="url(#pStem)" stroke-width="5" stroke-linecap="round"/>
+    <path fill="url(#pLite)" d="M102 36 C 62 22, 28 20, 10 28 C 36 40, 70 48, 102 46 Z"/>
+    <path fill="url(#pDark)" d="M106 42 C 142 26, 176 28, 192 38 C 168 48, 136 54, 106 52 Z"/>
+    <path fill="url(#pLite)" d="M101 68 C 56 56, 22 58, 6 70 C 34 80, 68 86, 101 80 Z"/>
+    <path fill="url(#pDark)" d="M107 74 C 150 60, 184 64, 196 78 C 170 88, 136 92, 107 86 Z"/>
+    <path fill="url(#pLite)" d="M100 102 C 52 92, 16 98, 4 112 C 32 120, 68 124, 100 116 Z"/>
+    <path fill="url(#pDark)" d="M106 108 C 154 96, 188 104, 198 118 C 170 128, 134 130, 106 122 Z"/>
+    <path fill="url(#pLite)" d="M99 138 C 50 130, 14 138, 4 154 C 32 160, 66 164, 99 152 Z"/>
+    <path fill="url(#pDark)" d="M105 144 C 152 134, 186 144, 196 160 C 168 168, 132 168, 105 158 Z"/>
+    <path fill="url(#pLite)" d="M98 174 C 52 168, 16 178, 8 194 C 34 198, 68 200, 98 188 Z"/>
+    <path fill="url(#pDark)" d="M104 180 C 148 172, 182 184, 190 200 C 164 206, 128 204, 104 194 Z"/>
+    <path fill="url(#pLite)" d="M97 210 C 56 206, 22 216, 14 232 C 40 234, 70 234, 97 224 Z"/>
+    <path fill="url(#pDark)" d="M103 216 C 144 210, 176 222, 184 238 C 158 240, 128 238, 103 230 Z"/>
+    <path fill="url(#pLite)" d="M97 246 C 62 244, 32 254, 24 268 C 48 268, 74 266, 97 258 Z"/>
+    <path fill="url(#pDark)" d="M103 252 C 138 248, 166 260, 172 274 C 148 274, 122 270, 103 264 Z"/>
+  </g>
+</svg>

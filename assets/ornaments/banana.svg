@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 340" aria-hidden="true">
+  <defs>
+    <linearGradient id="bBody" x1="20" y1="10" x2="230" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7eb24c"/>
+      <stop offset="0.28" stop-color="#4a8538"/>
+      <stop offset="0.62" stop-color="#2a5a2e"/>
+      <stop offset="1" stop-color="#132818"/>
+    </linearGradient>
+    <linearGradient id="bUnder" x1="160" y1="40" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a8c86a"/>
+      <stop offset="1" stop-color="#4d7a3a"/>
+    </linearGradient>
+    <radialGradient id="bShine" cx="34%" cy="24%" r="50%">
+      <stop offset="0" stop-color="#d4ec9a" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#d4ec9a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bSoft" x="-12%" y="-12%" width="130%" height="130%">
+      <feDropShadow dx="8" dy="12" stdDeviation="8" flood-color="#142016" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+  <g filter="url(#bSoft)">
+    <path fill="url(#bBody)" d="M128 10 C 86 28, 42 78, 36 132 C 30 182, 16 222, 44 258 C 68 288, 112 304, 148 278 C 168 262, 170 228, 164 188 C 158 142, 160 86, 154 48 C 150 26, 146 14, 128 10 Z"/>
+    <path fill="url(#bUnder)" d="M154 42 C 178 72, 208 118, 220 164 C 232 210, 214 250, 178 262 C 156 270, 148 242, 150 204 C 152 160, 148 96, 154 42 Z"/>
+    <path fill="url(#bShine)" d="M128 10 C 96 24, 64 58, 48 96 C 78 70, 116 40, 150 28 C 144 18, 136 12, 128 10 Z"/>
+  </g>
+  <path d="M128 14 C 136 88, 142 176, 150 300" fill="none" stroke="#0d1f12" stroke-width="6" stroke-linecap="round" opacity="0.32"/>
+  <path d="M132 18 C 138 90, 144 176, 150 288" fill="none" stroke="#e4f2b0" stroke-width="1.8" stroke-linecap="round" opacity="0.28"/>
+  <path d="M126 62 C 88 86, 62 118, 48 154" fill="none" stroke="#102418" stroke-width="1.5" opacity="0.22"/>
+  <path d="M130 96 C 94 122, 70 158, 58 194" fill="none" stroke="#102418" stroke-width="1.5" opacity="0.22"/>
+  <path d="M134 136 C 102 164, 82 200, 74 236" fill="none" stroke="#102418" stroke-width="1.5" opacity="0.2"/>
+  <path d="M138 176 C 112 204, 98 238, 94 268" fill="none" stroke="#102418" stroke-width="1.4" opacity="0.18"/>
+  <path d="M148 70 C 176 98, 198 134, 210 172" fill="none" stroke="#102418" stroke-width="1.4" opacity="0.18"/>
+  <path d="M150 118 C 176 148, 192 184, 198 220" fill="none" stroke="#102418" stroke-width="1.4" opacity="0.16"/>
+  <path d="M50 168 C 56 178, 46 196, 38 210" fill="none" stroke="#0d1f12" stroke-width="1.8" opacity="0.35"/>
+  <path d="M58 228 C 62 238, 52 254, 46 266" fill="none" stroke="#0d1f12" stroke-width="1.8" opacity="0.3"/>
+  <path d="M176 236 C 182 248, 174 266, 166 278" fill="none" stroke="#0d1f12" stroke-width="1.8" opacity="0.3"/>
+</svg>

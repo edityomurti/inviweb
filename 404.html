@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vera &amp; Edityo</title>
+    <script>
+      (function () {
+        var parts = location.pathname.split("/").filter(Boolean);
+        var last = parts.pop() || "";
+        if (!last || last.indexOf(".") !== -1) {
+          location.replace("./");
+          return;
+        }
+        var base = parts.length ? "/" + parts.join("/") + "/" : "/";
+        location.replace(base + "?to=" + encodeURIComponent(decodeURIComponent(last)));
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
